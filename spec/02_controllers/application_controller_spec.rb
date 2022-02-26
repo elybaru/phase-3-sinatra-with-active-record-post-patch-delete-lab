@@ -100,6 +100,7 @@ describe ApplicationController do
 
     it 'returns data for the updated bakery as JSON' do
       patch "/bakeries/#{bakery1.id}", params
+      
 
       expect(last_response.body).to include_json({ name: "Northwestside Bakery" })
     end
